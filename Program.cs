@@ -28,12 +28,13 @@ namespace test
 
             // 4 Types of parameters
             //==============================================
-            // value parameter
+            // reference parameter
             int i = 0;
-            MyMethod(i);
+            MyMethod(ref i);
             Console.WriteLine(i);
         }
-        public static void MyMethod(int j)
+
+        public static void MyMethod(ref int j)
         {
             j = 101;
         }
