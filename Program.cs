@@ -28,15 +28,40 @@ namespace test
 
             // 4 Types of parameters
             //==============================================
+            // value parameter
+            //int i = 0;
+            //MyMethod(i);
+            //Console.WriteLine(i);
+
             // reference parameter
-            int i = 0;
-            MyMethod(ref i);
-            Console.WriteLine(i);
+            //int i = 0;
+            //MyMethod(ref i);
+            //Console.WriteLine(i);
+
+            //out parameters
+            int total = 0;
+            int product = 0;
+            Calculate(10, 20, out total, out product);
+            Console.WriteLine("the total is {0} and the product is{1}", total,product);
+        }
+        // value parameter method
+        //public static void MyMethod(int j)
+        //{
+        //    j = 101;
+        //}
+
+        //// reference parameter method
+        //public static void MyMethod(ref int j)
+        //{
+        //    j = 101;
+        //}
+
+        //out parameter method
+        public static void Calculate(int num1, int num2,out int sum, out int product)
+        {
+            sum = num1 + num2;
+            product = num1 * num2;
         }
 
-        public static void MyMethod(ref int j)
-        {
-            j = 101;
-        }
     }
 }
