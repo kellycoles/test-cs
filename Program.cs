@@ -6,7 +6,22 @@ namespace test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //int? ticketsOnSale = 100;
+            //int availableTickets;
+            //if (ticketsOnSale == null)
+            //{
+            //    availableTickets = 0;
+            //}
+            //else
+            //{
+            //    //cast null to int
+            //    availableTickets = (int)ticketsOnSale;
+            //}
+
+            //Null Coalescing Operator
+            int? ticketsOnSale = 100;
+            int availableTickets = ticketsOnSale ?? 0;
+            Console.WriteLine("Available tickets = {0}", availableTickets);
         }
     }
 }
