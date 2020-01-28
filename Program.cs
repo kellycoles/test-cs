@@ -39,11 +39,20 @@ namespace test
             //Console.WriteLine(i);
 
             //out parameters
-            int total = 0;
-            int product = 0;
-            Calculate(10, 20, out total, out product);
-            Console.WriteLine("the total is {0} and the product is{1}", total,product);
+            //int total = 0;
+            //int product = 0;
+            //Calculate(10, 20, out total, out product);
+            //Console.WriteLine("the total is {0} and the product is {1}", total,product);
+
+            //params parameters
+            int[] Numbers = new int[3];
+            Numbers[0] = 101;
+            Numbers[1] = 344;
+            Numbers[2] = 21;
+            ParamsMethod(14, 2, 11);
+            //ParamsMethod(Numbers);
         }
+       
         // value parameter method
         //public static void MyMethod(int j)
         //{
@@ -57,11 +66,21 @@ namespace test
         //}
 
         //out parameter method
-        public static void Calculate(int num1, int num2,out int sum, out int product)
-        {
-            sum = num1 + num2;
-            product = num1 * num2;
-        }
+        //public static void Calculate(int num1, int num2,out int sum, out int product)
+        //{
+        //    sum = num1 + num2;
+        //    product = num1 * num2;
+        //}
 
+        // params parameter method
+        //params keyword makes passing parameters optional...can be only one number
+        public static void ParamsMethod(params int[] Numbers)
+        {
+            Console.WriteLine("There are {0} elements", Numbers.Length);
+         foreach(int i in Numbers)
+            {
+                Console.WriteLine(i);
+            }
+        }
     }
 }
